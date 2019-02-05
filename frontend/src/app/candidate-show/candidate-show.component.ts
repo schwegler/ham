@@ -15,7 +15,7 @@ export class CandidateShowComponent implements OnInit {
   constructor(public apiService: ApiService, public gifApiService: GifApiService, public acRoute : ActivatedRoute) { }
 
   public candidate : Candidate;
-  public gifset = {};
+  public gifs = [];
 
   ngOnInit() {
     this.acRoute.params.subscribe((data : any)=>{
@@ -26,7 +26,9 @@ export class CandidateShowComponent implements OnInit {
           if (data && data.name){
             console.log(data.name);
             this.gifApiService.get(data.name).subscribe((data : {})=>{
-              this.gifset = data;
+              console.log(data.data)
+              this.gifs = data.data;
+              console.log(this.gifs)
             });
           }
         });

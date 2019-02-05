@@ -1,5 +1,10 @@
-<div class="panel panel-default" style="margin-top:10px;">
-  <div class="panel-heading">
-      {{name}}
+<div class="panel panel-default" style="margin-top:10px;" *ngIf="candidate">
+  <div class="canidate-name">
+    {{candidate.name}}
+  </div>
+  <div class="image-block" masonry>
+    <div *ngFor="let gif of gifs" class="image-block-image">
+      <img src='{{gif.images.fixed_width.url}}' />
+    </div>
   </div>
 </div>

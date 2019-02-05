@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.image-block {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+  grid-column-gap: 0;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index: -1000;
+  .image-block-image {
+    width: 100%;
+    padding: 0;
+      img {
+        width:100%;
+      }
+  }
+}
+
+.panel-heading {
+  a {
+    padding-left: 10px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+  opacity: 0.5;
+}
