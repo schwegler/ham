@@ -1,25 +1,24 @@
-# Ham
+# Somebody Bring Me Some Ham!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+When Liz Lemon became the star of her very own talk show, she became obsessed with how the world sees her. Going to far as to having a procedure that made her cry out of her mouth. So, `http://localhost:4200/` will be the address for the app when you run it.
 
-Things you may want to cover:
+This is a simple web app that lets you add people to visually represent how the web "sees them." The scope got cut back mainly due to Twitter taking forever to answer a request for API access. So, it leans on a not-always-great Google Knowledge Graph API along with the Giphy API.
 
-* Ruby version
+Make sure to have both the main rails server going in the root along with a frontend angular server going in `/frontend`.
 
-* System dependencies
+#Backend
 
-* Configuration
+##Reqs
 
-* Database creation
+Ruby 2.5.0, Rails 5.2.2
 
-* Database initialization
+#Database
 
-* How to run the test suite
+This uses postgres, so have that going. A `rake db:create` and `rake db:migrate` followed by a `rake db:seed` will get things started.
 
-* Services (job queues, cache servers, search engines, etc.)
+#Run it.
 
-* Deployment instructions
+A simple Rails s should suffice.
 
 # Frontend
 
@@ -27,24 +26,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+An NPM install should get things up and running.
+Then, run `ng serve` for a dev frontend server. It will be available on `http://localhost:4200/`.

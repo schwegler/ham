@@ -1,7 +1,7 @@
 Candidate.create!([
   { name: 'Kamala Harris' },
   { name: 'RuPaul Charles' },
+  { name: 'Oprah' },
   { name: 'Bernie Sanders' },
-  { name: 'Corey Booker' },
   { name: 'Donald Trump' }
 ])
