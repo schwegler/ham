@@ -14,18 +14,24 @@ export class CandidateShowComponent implements OnInit {
 
   constructor(public apiService: ApiService, public gifApiService: GifApiService, public acRoute : ActivatedRoute) { }
 
-  public candidate : Candidate  = new Candidate();
+  public candidate : Candidate;
   public gifset = {};
 
   ngOnInit() {
     this.acRoute.params.subscribe((data : any)=>{
-      console.log(data.id);
+      if (data && data.id){
+        console.log(data.id);
         this.apiService.get("candidates/"+data.id).subscribe((data : Candidate)=>{
           this.candidate = data;
+          if (data && data.name){
+            console.log(data.name);
+            this.gifApiService.get(data.name).subscribe((data : {})=>{
+              this.gifset = data;
+            });
+          }
         });
+      }
     });
-    this.gifset = this.gifApiService.get(this.candidate.name)
-    debugger;
   }
 
 }

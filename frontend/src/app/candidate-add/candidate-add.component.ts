@@ -19,15 +19,15 @@ export class CandidateAddComponent implements OnInit {
     this.acRoute.params.subscribe((data : any)=>{
       console.log(data.id);
       if(data && data.id){
-          this.apiService.get("candidates/"+data.id).subscribe((data : Candidate)=>{
+        this.apiService.get("candidates/"+data.id).subscribe((data : Candidate)=>{
           this.candidate = data;
-          });
+        });
       }
       else
       {
-          this.candidate = new Candidate();
+        this.candidate = new Candidate();
       }
-      })
+    })
   }
 
   public onSubmit(){

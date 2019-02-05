@@ -17,7 +17,7 @@ export class CandidateListComponent implements OnInit {
     this.apiService.get("candidates").subscribe((data : Candidate[])=>{
       console.log(data);
       this.rows = data;
-      });
+    });
   }
 
   public columns = ['id','name'];

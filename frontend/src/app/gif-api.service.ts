@@ -7,7 +7,7 @@ import { environment } from '../environments/environment';
 })
 export class GifApiService {
 
-  GIF_API_URL : string = "api.giphy.com/v1/gifs/search";
+  GIF_API_URL : string = "http://api.giphy.com/v1/gifs/search";
   GIF_API_KEY : string = environment.giphy_api_key;
 
   constructor(public http: HttpClient) { }
