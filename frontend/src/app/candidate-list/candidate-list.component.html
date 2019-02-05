@@ -1,0 +1,17 @@
+<div class="panel panel-default" style="margin-top:10px;">
+  <div class="candidate-name" style="color:black">
+    Candidates
+  </div>
+  <div class="panel-body" style="position:relative">
+    <div class="table-responsive">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let row of rows">
+            <td><a href="/candidate/{{row.id}}">{{row.name}}</a></td>
+            <td *ngFor="let column of columns"></td>
+            <td style="text-align: right;"><button (click)="delete(row['id'])">delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

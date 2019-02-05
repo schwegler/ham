@@ -1,0 +1,20 @@
+<div class="panel panel-default" style="margin-top:10px;" *ngIf="candidate">
+  <div class="candidate-name">
+    {{candidate.name}}
+  </div>
+  <div class="panel-body main-bubble row">
+    <div *ngIf="graph.image" class="col-md-3">
+      <a href="{{graph.image.url}}"><img src="{{graph.image.contentUrl}}" /></a>
+    </div>
+    <div class="col-md-9">
+      <h2>{{graph.description}}</h2>
+      <p *ngIf="graph.detailedDescription"><span>{{graph.detailedDescription.articleBody}}</span> <a href="{{graph.detailedDescription.url}}">more...</a></p>
+      <p *ngIf="graph.url"><a href="{{graph.url}}">Website</a></p>
+    </div>
+  </div>
+  <div class="image-block">
+    <div *ngFor="let gif of gifs" class="image-block-image">
+      <img src='{{gif.images.fixed_width.url}}' />
+    </div>
+  </div>
+</div>
