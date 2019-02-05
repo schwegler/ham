@@ -15,6 +15,7 @@ https://www.youtube.com/watch?v=20FAAZnKFH4
 ## Reqs
 
 Ruby 2.5.0, Rails 5.2.2
+`bundle install` that good good Gemfile sauce.
 
 # Database
 
