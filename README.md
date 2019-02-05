@@ -7,6 +7,8 @@ This is a simple web app that lets you add people to visually represent how the 
 Make sure to have both the main rails server going in the root along with a frontend angular server going in `/frontend`.
 Also, for obvious reasons, I'll have to revoke access to the API keys in https://github.com/schwegler/ham/blob/master/frontend/src/environments/environment.ts after a while so Google doesn't ask for lots of money.
 
+https://www.youtube.com/watch?v=20FAAZnKFH4
+
 # Backend
 
 ## Reqs
