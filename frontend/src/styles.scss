@@ -25,11 +25,29 @@
     padding-left: 10px;
     &:hover {
       text-decoration: none;
+      opacity: 1;
+      text-decoration: none;
     }
   }
-  &:hover {
-    opacity: 1;
-    text-decoration: none;
-  }
-  opacity: 0.5;
+  opacity: 0.8;
+  clear: both;
+}
+
+.candidate-name {
+  font-size: 10em;
+  font-family: helvetica;
+  line-height: .8em;
+  color: white;
+  opacity: 0.8;
+  text-transform: uppercase;
+  clear: both;
+  margin-top: 25px;
+  overflow-wrap: break-word;
+}
+
+.main-bubble {
+  background: white;
+  opacity: 0.8;
+  padding: 25px;
+  border-radius: 5px;
 }

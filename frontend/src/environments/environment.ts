@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  giphy_api_key: "DfvcZ0w0sqp4S0n6ZAdhi0dgaWUkEzvs"
+  giphy_api_key: "DfvcZ0w0sqp4S0n6ZAdhi0dgaWUkEzvs",
+  google_kg_api_key: "AIzaSyDgl4al3Q7tbvYFazxZfv2zRKIUA0frUpk"
 };
 
 /*

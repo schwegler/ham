@@ -12,23 +12,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CandidateShowComponent implements OnInit {
 
-  constructor(public apiService: ApiService, public gifApiService: GifApiService, public acRoute : ActivatedRoute) { }
+  constructor(public apiService: ApiService, public gifApiService: GifApiService, public acRoute: ActivatedRoute) { }
 
-  public candidate : Candidate;
+  public candidate: Candidate;
   public gifs = [];
 
   ngOnInit() {
-    this.acRoute.params.subscribe((data : any)=>{
-      if (data && data.id){
-        console.log(data.id);
-        this.apiService.get("candidates/"+data.id).subscribe((data : Candidate)=>{
+    this.acRoute.params.subscribe((data: any) => {
+      if (data && data.id) {
+        this.apiService.get("candidates/" + data.id).subscribe((data: Candidate) => {
           this.candidate = data;
-          if (data && data.name){
-            console.log(data.name);
-            this.gifApiService.get(data.name).subscribe((data : {})=>{
-              console.log(data.data)
+          if (data && data.name) {
+            this.gifApiService.get(data.name).subscribe((data: {}) => {
               this.gifs = data.data;
-              console.log(this.gifs)
             });
           }
         });
